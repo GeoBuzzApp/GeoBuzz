@@ -7,10 +7,14 @@
         
         
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/register.css" />
        
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+		<script src="//geobuzzapp.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/register.js"></script>
 		
         <title>GeoBuzz</title>
     </head>
@@ -24,13 +28,12 @@
 	    	
 	    	<div id="loginPageContent">
     
-		    	<input type="text" id="loginPageUserName"/>
-		    	<input type="text" id="loginPagePassword"/>
-		    	
+		    	<div id="loginPageLoginInput">
+		    		<input type="text" id="loginPageUserName" placeholder="Username"/>
+		    		<div id="loginPageSpacer"></div>
+			    	<input type="text" id="loginPagePassword" placeholder="Password"/>
+		    	</div>
 		    	<p id="loginPageRegister">Register Now</p>
-		    	
-		    	<p id="loginPageFacebook">Connect With Facebook</p>
-		    	<p id="loginPageTwitter">Connect With Twitter</p>
 	    	</div>
     </div>
     </body>
