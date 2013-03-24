@@ -6,6 +6,12 @@
         Purpose of the stylesheet follows.
 */
 
+@media all and (max-width:500px) { 
+    #lp-signup {
+        display:none;
+    }
+}
+
 body {
     background: url("../img/lp-body-bg.png") #222;
     
