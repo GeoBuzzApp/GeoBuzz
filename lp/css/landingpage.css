@@ -26,15 +26,21 @@ body {
     top:0;
 }
 
-#lp-form {
+#lp-form, #lp-success {
     position:absolute;
-    top: 470px;
+    top: 500px;
     left:30px;
+}
+
+#lp-success {
+    font-size: 1.4em;
 }
 
 #lp-submit {
     float: right;
-    margin-right:60px;
+    padding:3px;
+    border-radius:5px;
+    margin-right:110px;
 }
 
 #lp-signup {

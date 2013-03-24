@@ -10,14 +10,20 @@ var client = new WindowsAzure.MobileServiceClient(
     "MIsNcNBbVhJGykqwdjQLcDQwamBcIy88"
 );
 
+$(document).ready(function() {
+   $("#lp-success").hide();
+});
+
 $("#lp-submit").click(function() {
     var name = $("#lp-name").val();
     var email = $("#lp-email").val();
-    var password = $("#lp-password").val();
+    if(name.length > 0) {
     var item = {
         name: name,
-        email: email,
-        password: password
+        email: email
     };
     client.getTable("user").insert(item);
+    $("#lp-form").fadeOut();
+    $("#lp-success").fadeIn();
+    }
 });
