@@ -21,11 +21,12 @@ $(document).ready(function() {
 
 */
 
-var register;
+var register = {};
+register.user;
+register.pass;
 
 $(document).on("vclick", "#registerPageSubmit", function(){
 	
-	/*
 	var name = $("#registerName").val();
 	var email = $("#registerEmail").val();
 	var email_confirm = $("#registerEmailConfirm").val();
@@ -74,36 +75,47 @@ $(document).on("vclick", "#registerPageSubmit", function(){
 	}
 	
 	client.getTable("user").insert(item);
-	*/
+	
+	register.user = email;
+	register.pass = pass;
+	
 	
 	$("#registerPagePopup").popup("open", {transition:"pop"});
 
 });
-
-function readData(data){
-			console.log(data);
-};
 		
-$(document).on("popupcreate", "#registerPagePopup", function(event, ui){
+$(document).on("popupbeforeposition", "#registerPagePopup", function(event, ui){
+	
+	$("#registerPopupDismiss").hide();
 	
 	setTimeout(function(){
 		
 		var user_table = client.getTable("user");
 		
-		var result = user_table.select("name", "password");
-		
-		result.read({
-			success:readData
-		});
-		
-		
-		
-		
+		user_table.where({email:register.user, password:register.pass}).read().done(function(results){
+			
+			$("#registerPopupSpinner").hide();
+			$("#registerPopupDismiss").show();
+			
+			if(results.length == 1){
+				$("#registerPopupText").html("You have successfully registered!");
+				register.success=true;
+			}
+			else{
+				$("#registerPopupText").html("We encountered difficulty registering you at this time. Please try again soon");
+				register.success=false;
+			}			
+		});	
 	}, 3000);
 	
 });
 
-
+$(document).on("vclick", "#registerPopupDismiss", function(){
+	if(register.success)
+		$.mobile.changePage("index.html");
+	else
+		$.mobile.back();
+});
 
 
 
