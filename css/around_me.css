@@ -1,0 +1,16 @@
+#aroundMeHeader{
+	position:absolute;
+	top:0px;
+	padding:10px;
+	left:0px;
+	right:0px;
+	background:#00a3c1;
+}
+
+#aroundMeHeaderRight{
+	text-align: right;
+}
+
+#aroundMeHeaderRight img{
+	margin:0px 12px;
+}
