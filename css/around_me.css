@@ -14,3 +14,52 @@
 #aroundMeHeaderRight img{
 	margin:0px 12px;
 }
+
+#aroundMeContent{
+	position:absolute;
+	top:65px;
+	left:0px;
+	right:0px;
+	bottom:50px;
+	padding:10px 0px;
+}
+
+.aroundMeLocationItem{
+	height:68px;
+	padding:10px 12px;
+	background:#DDD;
+	position:relative;
+	border-top:1px solid #BBB;
+	border-bottom:1px solid #BBB;
+	margin-bottom: 2px;
+}
+
+.aroundMeLocationItemImage{
+	display:inline-block;
+	height:100%;
+}
+
+.aroundMeLocationItemContainer{
+	display:inline-block;
+	height:80px;
+	position:absolute;
+	top:0px;
+}
+
+.aroundMeLocationItemTitle{
+	margin:10px;
+	font-family: tahoma, sans-serif;
+	font-size: x-large;
+}
+
+.aroundMeLocationItemLower{
+	margin-left: 10px;	
+}
+
+.aroundMeLocationItemLower p{
+	display: inline-block;
+	font-family: tahoma, sans-serif;
+	margin: 0px 10px 0px 3px;
+	position: relative;
+	top: -4px;
+}
