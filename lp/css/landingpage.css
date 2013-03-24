@@ -6,9 +6,12 @@
         Purpose of the stylesheet follows.
 */
 
-@media all and (max-width:500px) { 
+@media all and (max-width:800px) { 
     #lp-signup {
         display:none;
+    }
+    #lp-background {
+        margin-left:0 !important;
     }
 }
 
