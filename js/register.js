@@ -25,6 +25,7 @@ $(document).ready(function() {
 
 $(document).on("vclick", "#registerPageSubmit", function(){
 	
+	/*
 	var name = $("#registerName").val();
 	var email = $("#registerEmail").val();
 	var email_confirm = $("#registerEmailConfirm").val();
@@ -35,6 +36,7 @@ $(document).on("vclick", "#registerPageSubmit", function(){
 	
 	var age_patt = RegExp('\d?');
 	var email_patt = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	
 	
 	if(!email_patt.test(email)){
 		$("#registerPageError").html("Please ensure you enter a valid E-mail");
@@ -72,10 +74,16 @@ $(document).on("vclick", "#registerPageSubmit", function(){
 	}
 	
 	client.getTable("user").insert(item);
+	*/
 	
+	$("#registerPagePopup").popup("open", {transition:"pop"});
 
 });
 
+
+$(document).on("popupcreate", "#registerPagePopup", function(event, ui){
+	
+});
 
 
 
