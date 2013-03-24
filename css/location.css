@@ -1,0 +1,68 @@
+#locationPageContent{
+	position:absolute;
+	top:67px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	padding-top: 10px;
+}
+
+#locationPageTitleContainer{
+	height:85px;
+	padding:10px 10px 5px 10px;
+	position:relative;
+	background:#CCC;
+}
+
+#locationPageTitle{
+	font-family: tahoma, sans-serif;
+	font-size: xx-large;
+	margin:0px 5px 5px 5px;
+	position: relative;
+	top:-5px;
+}
+
+#locationPageTitleContainerLower{
+	position:absolute;
+	bottom:10px;
+	right:0px;
+	left:0px;
+	text-align: right;
+	padding-right:15px; 
+}
+
+#locationPageImage{
+	height:120px;
+	display: inline-block;
+	position:absolute;
+	top:0px;
+	left:10px;
+}
+
+#locationPageCheckButton{
+	padding:4px 25px;
+	color:white;
+	background: #00a3c1;
+	font-family: tahoma, sans-serif;
+	display: inline-block;
+	font-size:large;
+	margin:0px;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+	
+	border:0px solid #AAC;
+}
+
+#locationPageFriendImage{
+	display:inline-block;
+	margin: 0px 5px 0px 10px;
+	position: relative;
+	top:3px
+}
+
+#locationPageFriendCount{
+	display:inline-block;
+	position:relative;
+	margin: 0px 5px 0px 10px;
+	font-family: tahoma, sans-serif;
+	font-weight: bold;
+}

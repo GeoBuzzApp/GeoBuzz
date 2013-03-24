@@ -1,17 +1,20 @@
-#aroundMeHeader{
+#applicationHeader{
 	position:absolute;
-	top:0px;
+	top:-67px;
 	padding:10px;
 	left:0px;
 	right:0px;
 	background:#00a3c1;
+	-webkit-transition: all 500ms ease-out;
+	
+	z-index:10;
 }
 
-#aroundMeHeaderRight{
+#applicationHeaderRight{
 	text-align: right;
 }
 
-#aroundMeHeaderRight img{
+#applicationHeaderRight img{
 	margin:0px 12px;
 }
 

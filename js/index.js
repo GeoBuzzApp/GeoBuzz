@@ -30,3 +30,9 @@ $(document).on("vclick", "#loginPageLogin", function(){
 	});
 	
 });
+
+$(document).on("pagebeforeshow", "#loginPage", function(){
+	
+	$("#applicationHeader").css("-webkit-transform", "translateY(0px)");
+	
+});
