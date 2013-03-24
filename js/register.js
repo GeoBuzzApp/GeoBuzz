@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 */
 
-
+var register;
 
 $(document).on("vclick", "#registerPageSubmit", function(){
 	
@@ -80,8 +80,26 @@ $(document).on("vclick", "#registerPageSubmit", function(){
 
 });
 
-
+function readData(data){
+			console.log(data);
+};
+		
 $(document).on("popupcreate", "#registerPagePopup", function(event, ui){
+	
+	setTimeout(function(){
+		
+		var user_table = client.getTable("user");
+		
+		var result = user_table.select("name", "password");
+		
+		result.read({
+			success:readData
+		});
+		
+		
+		
+		
+	}, 3000);
 	
 });
 
